@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d11c5724ad24f4e99ab855c52ccae7, type: 3}
+  m_Name: OrangeAnimal
+  m_EditorClassIdentifier: 
+  SparklesVFX: {fileID: 1377865901568998882, guid: e1fd3f7967509d840aa8fd7b4a8f88bd,
+    type: 3}
+  animalPrefab: {fileID: 2826853570080423219, guid: ae4aa0d4f52204b429e98853e7369de2,
+    type: 3}
+  human: {fileID: 8436538178998636683, guid: ace0c76516762e041a5d85b2b0efa2f8, type: 3}
+  spawnPrefab: {fileID: 7721518733243705746, guid: 1ba75700d4177eb4ca5c481bde49e4f3,
+    type: 3}
