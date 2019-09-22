@@ -12,7 +12,7 @@ public class GameManage : MonoBehaviour
     public GameObject menuPause, popupDificuldade;
     public float meta, time;
     public int combo, currentSceneIndex, timeToWait = 3, life, points;
-    public bool pause = false, ison, isBegin;
+    public bool pause = false, isBegin, calledWinScreen;
     SpawnHumans SH;
     SceneManage SM;
     City city;
@@ -46,15 +46,22 @@ public class GameManage : MonoBehaviour
 
     void Update()
     {
-        if(combo == 5)
-        {
-            StartCoroutine ("WinScene");
-        }
         MudarTela();
         Life();
         PauseGame();
         TimerCount();
+        Victory();
     }
+
+    private void Victory()
+    {
+        if (combo == 5 && !calledWinScreen)
+        {
+            StartCoroutine("WinScene");
+            calledWinScreen = true;
+        }
+    }
+
     private void PauseGame()
     {
         if (Input.GetKeyDown(KeyCode.P) && pause == false)

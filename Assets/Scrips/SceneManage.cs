@@ -28,45 +28,16 @@ public class SceneManage : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                LoadNextScene();
-                //continuar = false;
+               StartCoroutine(LoadScene("Fases", 1));
             }
         }
-    }
+    }   
 
-    //IEnumerator WaitAndLoad()
-    //{
-    //    yield return new WaitForSeconds(timeToWait);
-    //    teclaTexto.text = "Pressione espaço para Continuar";
-    //    continuar = true;
-    //}
-
-
-    public void LoadNextScene()
-    {
-        //configs.SetActive(false);
-        StartCoroutine(NextScene());
-    }
-
-    IEnumerator NextScene()
-    {
-        //configs.SetActive(false);
-        yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene(currentSceneIndex + 1);
-    }
-
-    public void Win()
-    {
-        //configs.SetActive(false);
-        SaveManager.Load();
-        SceneManager.LoadScene("WinScreen");
-    }
-
-    public void Lose()
-    {
-        //configs.SetActive(false);
-        SceneManager.LoadScene("LoseScreen");
-    }
+    public IEnumerator LoadScene(string scene, float waitTime)
+    {        
+        yield return new WaitForSeconds(waitTime);
+        SceneManager.LoadScene(scene);     
+    }     
 
     public void QuitGame()
     {
