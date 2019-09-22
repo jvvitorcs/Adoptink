@@ -27,7 +27,11 @@ public class GameManage : MonoBehaviour
 
 
 
-
+    asdasasasasasasasasasasasasasasasasasasasasasasasasasasasdasdas
+        fjasbnfdaskfbasf
+        akagbasjfbjkasbgas
+        çogabsnogfjabsgçjoiasb gçalos
+        saçjfb çaks bgasob gaolçbnçoleqwk
 
 
 
