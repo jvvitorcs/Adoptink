@@ -24,6 +24,19 @@ public class GameManage : MonoBehaviour
 
     
 
+
+
+
+
+
+
+
+
+
+
+
+
+
     void Start()
     {
         var LoadSave = SaveManager.Load();
