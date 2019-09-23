@@ -8,17 +8,11 @@ public class SpawnHumans : MonoBehaviour
 
     [SerializeField] float timer = 0.5f, wait = 3f;
     [SerializeField] GameObject[] humaninho;
-    int choice, count, erros;
-    //Animals AA;
-    City city;
-
-    GameManage GM;
+    int choice, count, erros;    
 
     void Start()
     {
-        //AA = FindObjectOfType<Animals>();
-        GM = FindObjectOfType<GameManage>();
-        city = FindObjectOfType<City>();
+        
     }
 
     void Update()

@@ -1072,7 +1072,17 @@ PrefabInstance:
     - target: {fileID: 1737159515410302572, guid: 6f5acf44e70ee3f4ebeeae46bdd02f4d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.8959485
+      value: 1.0665314
+      objectReference: {fileID: 0}
+    - target: {fileID: 1737159515410302572, guid: 6f5acf44e70ee3f4ebeeae46bdd02f4d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0465
+      objectReference: {fileID: 0}
+    - target: {fileID: 1737159515410302572, guid: 6f5acf44e70ee3f4ebeeae46bdd02f4d,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0465
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f5acf44e70ee3f4ebeeae46bdd02f4d, type: 3}
@@ -2318,8 +2328,8 @@ MonoBehaviour:
   life: 0
   points: 0
   pause: 0
-  ison: 0
   isBegin: 0
+  calledWinScreen: 0
   SoundPoint: {fileID: 8300000, guid: fc158d35ea14d9f40b01cc2caf87ec1a, type: 3}
   SoundError: {fileID: 8300000, guid: 97004a49362ec6948834d1e499a64ecc, type: 3}
   cronometro: {fileID: 1849000103}

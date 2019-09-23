@@ -21,7 +21,8 @@ public class GameManage : MonoBehaviour
     AudioSource myAudioSource;
     public Text cronometro;
     public string mapName;
-    public GameObject a, av, b, s;    void Start()
+
+    void Start()
     {
         var LoadSave = SaveManager.Load();
         if (LoadSave != null)
