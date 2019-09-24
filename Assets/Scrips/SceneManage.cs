@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class SceneManage : MonoBehaviour
 {
-    [SerializeField] int timeToWait = 5;
+    //[SerializeField] int timeToWait = 5;
     int currentSceneIndex;
     public Text teclaTexto;
     //public bool continuar;
@@ -28,16 +28,16 @@ public class SceneManage : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-               StartCoroutine(LoadScene("Fases", 1));
+                StartCoroutine(LoadScene("Fases", 1));
             }
         }
-    }   
+    }
 
     public IEnumerator LoadScene(string scene, float waitTime)
-    {        
+    {
         yield return new WaitForSeconds(waitTime);
-        SceneManager.LoadScene(scene);     
-    }     
+        SceneManager.LoadScene(scene);
+    }
 
     public void QuitGame()
     {
@@ -49,7 +49,7 @@ public class SceneManage : MonoBehaviour
         SceneManager.LoadScene(nome);
     }
 
-    
 
-    
+
+
 }

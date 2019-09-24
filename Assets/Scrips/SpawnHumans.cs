@@ -8,17 +8,17 @@ public class SpawnHumans : MonoBehaviour
 
     [SerializeField] float timer = 0.5f, wait = 3f;
     [SerializeField] GameObject[] humaninho;
-    int choice, count, erros;    
+    int choice, count, erros;
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        
-        timer -= Time.deltaTime;        
+
+        timer -= Time.deltaTime;
         Escolha();
 
         if (wait <= 1)
@@ -27,7 +27,7 @@ public class SpawnHumans : MonoBehaviour
         }
     }
 
-   
+
 
     private void Escolha()
     {
@@ -67,11 +67,11 @@ public class SpawnHumans : MonoBehaviour
             }
 
             count += 1;
-          
+
 
             if (count == 5)
             {
-               //timer = 5f;
+                //timer = 5f;
                 count = 0;
                 wait -= .3f;
                 //Invoke("PerderVida", 2);

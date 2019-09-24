@@ -39,7 +39,7 @@ public class GameManage : MonoBehaviour
         isBegin = false;
         points = 0;
         meta = 5;
-        life = 3;        
+        life = 3;
     }
 
     void Update()
@@ -68,7 +68,8 @@ public class GameManage : MonoBehaviour
             pause = true;
             menuPause.SetActive(true);
 
-        } else
+        }
+        else
 
         if (Input.GetKeyDown(KeyCode.P) && pause == true)
         {
@@ -104,7 +105,8 @@ public class GameManage : MonoBehaviour
         }
     }
     //Está sendo chamado pelo AnimalCollision
-    public void AddPoints(){
+    public void AddPoints()
+    {
         myAudioSource.PlayOneShot(SoundPoint);
         points += 1;
         life += 1;
@@ -119,7 +121,7 @@ public class GameManage : MonoBehaviour
 
     IEnumerator WinScene()
     {
-        
+
         FindObjectOfType<SceneManage>().previousMap = mapName;
         SaveManager.Save(combo, mapName, combo);
         yield return new WaitForSeconds(timeToWait);
@@ -147,7 +149,7 @@ public class GameManage : MonoBehaviour
                 //salvar aqui tambem;
                 FindObjectOfType<SceneManage>().previousMap = mapName;
                 SaveManager.Save(combo, mapName, combo);
-                SceneManager.LoadScene("WinScreen");               
+                SceneManager.LoadScene("WinScreen");
             }
         }
     }
@@ -179,6 +181,6 @@ public class GameManage : MonoBehaviour
         isBegin = true;
     }
 
-    
+
 
 }

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Crystal : MonoBehaviour
 {
-
     public Sprite[] lifeSprite;
     public Image lifeUI;
     private GameManage GM;
@@ -13,7 +12,7 @@ public class Crystal : MonoBehaviour
 
     void Start()
     {
-        GM = FindObjectOfType<GameManage>();    
+        GM = FindObjectOfType<GameManage>();
     }
 
     void Update()

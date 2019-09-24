@@ -6,22 +6,22 @@ public class ChangeSprite : MonoBehaviour
 {
 
     public Sprite rightSprite;
-    SpriteRenderer myspriteRenderer;
+    //SpriteRenderer myspriteRenderer;
     Movement movement;
     BoxCollider2D boxbox;
     Animator myanimator;
 
-    float speed = 3f;
-    Color color;
+    //float speed = 3f;
+    //Color color;
 
 
     private void Start()
     {
         boxbox = GetComponent<BoxCollider2D>();
-        color = GetComponent<SpriteRenderer>().color;
         myanimator = GetComponent<Animator>();
         movement = GetComponent<Movement>();
-        myspriteRenderer = GetComponent<SpriteRenderer>();
+        //color = GetComponent<SpriteRenderer>().color;
+        //myspriteRenderer = GetComponent<SpriteRenderer>();
     }
     public void Change()
     {

@@ -15,20 +15,20 @@ public class MapScript : MonoBehaviour
             if (scoreLevel <= 3 && scoreLevel > 0)
             {
                 estrelinhaMaps[i].sprite = estrelas[1];
-            } else if (scoreLevel > 3 && scoreLevel <= 6)
+            }
+            else if (scoreLevel > 3 && scoreLevel <= 6)
             {
                 estrelinhaMaps[i].sprite = estrelas[2];
             }
             else if (scoreLevel > 6 && scoreLevel <= 8)
             {
                 estrelinhaMaps[i].sprite = estrelas[3];
-            } else if (scoreLevel > 8 && scoreLevel == 9)
+            }
+            else if (scoreLevel > 8 && scoreLevel == 9)
             {
                 casasImagem[i].sprite = casas[i];
                 estrelinhaMaps[i].sprite = estrelas[4];
             }
-
-            
         }
 
     }
@@ -42,18 +42,20 @@ public class MapScript : MonoBehaviour
             if (index > HighScore.Count - 1)
             {
                 return 0;
-            } else
-            {                
+            }
+            else
+            {
                 return HighScore[index];
-                
-            }               
-              
-        } else
+
+            }
+
+        }
+        else
         {
             Debug.Log("SaveNonEcxiste");
             return 0;
         }
-       
+
     }
 
 

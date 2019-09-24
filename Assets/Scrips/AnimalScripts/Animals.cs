@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Animals : MonoBehaviour
 {
-    //[SerializeField] GameObject catYellow, dogBlue, dogGreen, dogPurple, catRed, dogOrange;
     Rigidbody2D myRigidbody;
-    SpawnHumans SH;
+    //SpawnHumans SH;
     Movement move;
     [SerializeField] int count;
     public bool permitido = false;
@@ -16,7 +15,7 @@ public class Animals : MonoBehaviour
 
     void Start()
     {
-        SH = FindObjectOfType<SpawnHumans>();
+        //SH = FindObjectOfType<SpawnHumans>();
     }
 
     void Update()
