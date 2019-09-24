@@ -12,27 +12,24 @@ public class MapScript : MonoBehaviour
         for (int i = 0; i < estrelinhaMaps.Length; i++)
         {
             var scoreLevel = GetScoreFromLevels(i);
-            if (scoreLevel <= 3)
+            if (scoreLevel <= 3 && scoreLevel > 0)
             {
-                casasImagem[i].sprite = casas[i];
                 estrelinhaMaps[i].sprite = estrelas[1];
-            } else if (scoreLevel <= 6)
+            } else if (scoreLevel > 3 && scoreLevel <= 6)
             {
                 estrelinhaMaps[i].sprite = estrelas[2];
             }
-            else if (scoreLevel <= 8)
+            else if (scoreLevel > 6 && scoreLevel <= 8)
             {
                 estrelinhaMaps[i].sprite = estrelas[3];
-            } else if (scoreLevel == 9)
+            } else if (scoreLevel > 8 && scoreLevel == 9)
             {
+                casasImagem[i].sprite = casas[i];
                 estrelinhaMaps[i].sprite = estrelas[4];
             }
 
             
         }
-
-        //colocar os sprites e imagens das casas :)
-
 
     }
 
