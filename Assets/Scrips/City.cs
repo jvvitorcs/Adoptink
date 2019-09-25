@@ -12,13 +12,13 @@ public class City : MonoBehaviour
         myAnim = GetComponent<Animator>();
     }
 
-    private void Update()
-    {
-        if(transition <= 0)
-        {
-            transition = 0;
-        }
-    }
+    //private void Update()
+    //{
+    //    if(transition <= 0)
+    //    {
+    //        transition = 0;
+    //    }
+    //}
 
     public void Mudar()
     {
@@ -26,11 +26,11 @@ public class City : MonoBehaviour
          myAnim.SetInteger("Transition", transition);
     }
 
-    public void Diminuir()
-    {
+    //public void Diminuir()
+    //{
 
-        transition--;
-        FindObjectOfType<GameManage>().combo -= 1;
-        myAnim.SetInteger("Transition", transition);
-    }
+    //    transition--;
+    //    FindObjectOfType<GameManage>().combo -= 1;
+    //    myAnim.SetInteger("Transition", transition);
+    //}
 }

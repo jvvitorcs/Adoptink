@@ -53,7 +53,7 @@ public class GameManage : MonoBehaviour
 
     private void Victory()
     {
-        if (combo == 5 && !calledWinScreen)
+        if (combo == 9 && !calledWinScreen)
         {
             StartCoroutine("WinScene");
             calledWinScreen = true;
