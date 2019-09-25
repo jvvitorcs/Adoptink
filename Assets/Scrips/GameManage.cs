@@ -14,7 +14,6 @@ public class GameManage : MonoBehaviour
     public int combo, currentSceneIndex, timeToWait = 3, life, points;
     public bool pause = false, isBegin, calledWinScreen;
     SpawnHumans SH;
-    SceneManage SM;
     City city;
     int maxLife = 6;
     [SerializeField] AudioClip SoundPoint, SoundError;
@@ -33,7 +32,6 @@ public class GameManage : MonoBehaviour
         Time.timeScale = 0;
         popupDificuldade.SetActive(true);
         myAudioSource = GetComponent<AudioSource>();
-        SM = FindObjectOfType<SceneManage>();
         city = FindObjectOfType<City>();
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         isBegin = false;
@@ -62,7 +60,7 @@ public class GameManage : MonoBehaviour
 
     private void PauseGame()
     {
-        if (Input.GetKeyDown(KeyCode.P) && pause == false)
+        if (Input.GetKeyDown(KeyCode.P) && pause == false && isBegin)
         {
             Time.timeScale = 0;
             pause = true;
@@ -71,7 +69,7 @@ public class GameManage : MonoBehaviour
         }
         else
 
-        if (Input.GetKeyDown(KeyCode.P) && pause == true)
+        if (Input.GetKeyDown(KeyCode.P) && pause == true && isBegin)
         {
             Time.timeScale = 1;
             pause = false;
@@ -116,7 +114,6 @@ public class GameManage : MonoBehaviour
     public void PlayError()
     {
         myAudioSource.PlayOneShot(SoundError);
-
     }
 
     IEnumerator WinScene()
@@ -159,7 +156,7 @@ public class GameManage : MonoBehaviour
         Time.timeScale = 1;
         popupDificuldade.SetActive(false);
 
-        time = 120f;
+        time = 300f;
         isBegin = true;
 
     }
@@ -169,7 +166,7 @@ public class GameManage : MonoBehaviour
         Time.timeScale = 1;
         popupDificuldade.SetActive(false);
 
-        time = 60f;
+        time = 240f;
         isBegin = true;
 
     }
@@ -177,7 +174,7 @@ public class GameManage : MonoBehaviour
     {
         popupDificuldade.SetActive(false);
         Time.timeScale = 1;
-        time = 30f;
+        time = 180f;
         isBegin = true;
     }
 

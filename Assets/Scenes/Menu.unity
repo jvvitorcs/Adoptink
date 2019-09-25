@@ -805,7 +805,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5534094786028757302}
+      - m_Target: {fileID: 1385433841805492523, guid: bbc1f9ee0c2316a45bb25e0260b778b9,
+          type: 3}
         m_MethodName: TrocarCena
         m_Mode: 5
         m_Arguments:
@@ -1168,7 +1169,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5534094786028757302}
+      - m_Target: {fileID: 1385433841805492523, guid: bbc1f9ee0c2316a45bb25e0260b778b9,
+          type: 3}
         m_MethodName: TrocarCena
         m_Mode: 5
         m_Arguments:
@@ -1176,7 +1178,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SplashScreen
+          m_StringArgument: Fases
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1619,7 +1621,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5534094786028757302}
+      - m_Target: {fileID: 1385433841805492523, guid: bbc1f9ee0c2316a45bb25e0260b778b9,
+          type: 3}
         m_MethodName: TrocarCena
         m_Mode: 5
         m_Arguments:
@@ -2138,89 +2141,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: fd96740eef397474380bc35eaeb1190d, type: 2}
---- !u!114 &5534094786028757302 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1385433841805492523, guid: bbc1f9ee0c2316a45bb25e0260b778b9,
-    type: 3}
-  m_PrefabInstance: {fileID: 6914997256928813085}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 998f8f0b22725d7419ea1c70ef25d65b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1001 &6914997256928813085
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2417258501756031996, guid: bbc1f9ee0c2316a45bb25e0260b778b9,
-        type: 3}
-      propertyPath: m_Name
-      value: SceneManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 1385433841805492523, guid: bbc1f9ee0c2316a45bb25e0260b778b9,
-        type: 3}
-      propertyPath: configs
-      value: 
-      objectReference: {fileID: 1578090885}
-    - target: {fileID: 6834201859070937953, guid: bbc1f9ee0c2316a45bb25e0260b778b9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.998834
-      objectReference: {fileID: 0}
-    - target: {fileID: 6834201859070937953, guid: bbc1f9ee0c2316a45bb25e0260b778b9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.47121885
-      objectReference: {fileID: 0}
-    - target: {fileID: 6834201859070937953, guid: bbc1f9ee0c2316a45bb25e0260b778b9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 120.22315
-      objectReference: {fileID: 0}
-    - target: {fileID: 6834201859070937953, guid: bbc1f9ee0c2316a45bb25e0260b778b9,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6834201859070937953, guid: bbc1f9ee0c2316a45bb25e0260b778b9,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6834201859070937953, guid: bbc1f9ee0c2316a45bb25e0260b778b9,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6834201859070937953, guid: bbc1f9ee0c2316a45bb25e0260b778b9,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6834201859070937953, guid: bbc1f9ee0c2316a45bb25e0260b778b9,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6834201859070937953, guid: bbc1f9ee0c2316a45bb25e0260b778b9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6834201859070937953, guid: bbc1f9ee0c2316a45bb25e0260b778b9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6834201859070937953, guid: bbc1f9ee0c2316a45bb25e0260b778b9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bbc1f9ee0c2316a45bb25e0260b778b9, type: 3}

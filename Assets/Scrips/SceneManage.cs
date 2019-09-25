@@ -24,11 +24,11 @@ public class SceneManage : MonoBehaviour
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
-        if (currentSceneIndex == 1)
+        if (currentSceneIndex == 0)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                StartCoroutine(LoadScene("Fases", 1));
+                StartCoroutine(LoadScene("Menu", 1));
             }
         }
     }
