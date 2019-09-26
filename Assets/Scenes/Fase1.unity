@@ -368,6 +368,13 @@ MonoBehaviour:
   - {fileID: 1460971888741975533, guid: e3500caedb2c36148ab30284c8804245, type: 3}
   - {fileID: 8436538178998636683, guid: 53471e0248787b74ab628c925294a8d7, type: 3}
   - {fileID: 8436538178998636683, guid: 07ea62c3882c2f2438ec6606951439fd, type: 3}
+  dificuldade: 0
+  difficultyRange:
+  - 1.97
+  - 5.49
+  - 10
+  dificuldadeMaxima: 0.7
+  aleatoriedade: 0.4
 --- !u!4 &193452932
 Transform:
   m_ObjectHideFlags: 0
@@ -420,7 +427,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -247, y: -66.14688}
+  m_AnchoredPosition: {x: -247, y: -66.14697}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &260256330
@@ -2473,7 +2480,7 @@ MonoBehaviour:
   combo: 0
   currentSceneIndex: 0
   timeToWait: 3
-  life: 0
+  life: 3
   points: 0
   pause: 0
   isBegin: 0

@@ -11,13 +11,13 @@ public class GameManage : MonoBehaviour
     public List<string> maps = new List<string>();
     public GameObject menuPause, popupDificuldade;
     public float meta, time;
-    public int combo, currentSceneIndex, timeToWait = 3, life, points;
+    public int combo, currentSceneIndex, timeToWait = 3, life = 3, points;
     public bool pause = false, isBegin, calledWinScreen;
     SpawnHumans SH;
     City city;
     int maxLife = 6;
     [SerializeField] AudioClip SoundPoint, SoundError;
-    AudioSource myAudioSource;
+   // AudioSource myAudioSource;
     public Text cronometro;
     public string mapName;
 
@@ -31,7 +31,7 @@ public class GameManage : MonoBehaviour
         }
         Time.timeScale = 0;
         popupDificuldade.SetActive(true);
-        myAudioSource = GetComponent<AudioSource>();
+       // myAudioSource = GetComponent<AudioSource>();
         city = FindObjectOfType<City>();
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         isBegin = false;
@@ -99,13 +99,18 @@ public class GameManage : MonoBehaviour
         }
         else if (life <= 0)
         {
-            StartCoroutine(LoseScene());
+            life = 0;
+            //StartCoroutine(LoseScene());
+            SceneManager.LoadScene("LoseScreen");
+
         }
     }
     //Está sendo chamado pelo AnimalCollision
     public void AddPoints()
     {
-        myAudioSource.PlayOneShot(SoundPoint);
+        //myAudioSource.PlayOneShot(SoundPoint);
+        AudioManager.instance.PlaySFx(SoundPoint, false);
+
         points += 1;
         life += 1;
 
@@ -113,23 +118,23 @@ public class GameManage : MonoBehaviour
 
     public void PlayError()
     {
-        myAudioSource.PlayOneShot(SoundError);
+        //myAudioSource.PlayOneShot(SoundError);
+        AudioManager.instance.PlaySFx(SoundError, false);
+
     }
 
     IEnumerator WinScene()
     {
-
-        FindObjectOfType<SceneManage>().previousMap = mapName;
+        SceneManage.getInstace().previousMap = mapName;
         SaveManager.Save(combo, mapName, combo);
         yield return new WaitForSeconds(timeToWait);
         SceneManager.LoadScene("WinScreen");
     }
 
-    IEnumerator LoseScene()
-    {
-        yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("LoseScreen");
-    }
+    //IEnumerator LoseScene()
+    //{
+    //    yield return new WaitForSeconds(2f);
+    //}
 
     void TimerCount()
     {
@@ -144,7 +149,7 @@ public class GameManage : MonoBehaviour
             if (time <= 0)
             {
                 //salvar aqui tambem;
-                FindObjectOfType<SceneManage>().previousMap = mapName;
+                SceneManage.getInstace().previousMap = mapName;
                 SaveManager.Save(combo, mapName, combo);
                 SceneManager.LoadScene("WinScreen");
             }
@@ -155,9 +160,9 @@ public class GameManage : MonoBehaviour
     {
         Time.timeScale = 1;
         popupDificuldade.SetActive(false);
-
         time = 300f;
         isBegin = true;
+        FindObjectOfType<SpawnHumans>().dificuldade = 0;
 
     }
 
@@ -165,9 +170,11 @@ public class GameManage : MonoBehaviour
     {
         Time.timeScale = 1;
         popupDificuldade.SetActive(false);
-
         time = 240f;
         isBegin = true;
+        FindObjectOfType<SpawnHumans>().dificuldade = 1;
+
+
 
     }
     public void SetHard()
@@ -176,8 +183,16 @@ public class GameManage : MonoBehaviour
         Time.timeScale = 1;
         time = 180f;
         isBegin = true;
+        FindObjectOfType<SpawnHumans>().dificuldade = 2;
     }
 
+    public bool isGameOver()
+    {
 
+        if (!calledWinScreen && life > 0)
+            return false;
+        return true;
+
+    }
 
 }

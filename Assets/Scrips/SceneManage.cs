@@ -8,11 +8,11 @@ using UnityEngine.UI;
 
 public class SceneManage : MonoBehaviour
 {
-    //[SerializeField] int timeToWait = 5;
     int currentSceneIndex;
-    public Text teclaTexto;
-    //public bool continuar;
     public string previousMap;
+   
+
+    private static SceneManage instance;  
 
     void Start()
     {
@@ -47,6 +47,16 @@ public class SceneManage : MonoBehaviour
     public void TrocarCena(string nome)
     {
         SceneManager.LoadScene(nome);
+    }
+
+    public static SceneManage getInstace()
+    {
+        if (instance == null)
+        {
+            instance = new GameObject().AddComponent<SceneManage>();
+        }
+
+        return instance;
     }
 
 

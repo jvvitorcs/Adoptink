@@ -22,6 +22,7 @@ public class ButtonSound : MonoBehaviour
 
     public void PlaySound()
     {
-        source.PlayOneShot(sound); 
+        //source.PlayOneShot(sound); 
+        AudioManager.instance.PlaySFx(sound, false);
     }
 }

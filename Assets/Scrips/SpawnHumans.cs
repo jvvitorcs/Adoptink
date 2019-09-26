@@ -9,98 +9,47 @@ public class SpawnHumans : MonoBehaviour
     [SerializeField] float timer = 0.5f, wait = 3f;
     [SerializeField] GameObject[] humaninho;
     int choice, count, erros;
+    public int dificuldade;
+    [Range(0, 10)] [SerializeField] private float[] difficultyRange;
+    [Range(0.5f, 1)] public float dificuldadeMaxima; // quanto menor mais dificil
+    [Range(0, 1)]public float aleatoriedade; //lembrar de deixar menor ou igual (se ficar igual acaba vindo dois em sequencia) que a dificuldade maxima
 
-    void Start()
+    private void Start()
     {
-
+        StartCoroutine(spawnHumans());
     }
-
-    void Update()
+    IEnumerator spawnHumans()
     {
 
-        timer -= Time.deltaTime;
-        Escolha();
+        var _GamaManager = FindObjectOfType<GameManage>();
 
-        if (wait <= 1)
+
+        float _waitTime = 3;
+        float spawnCooldown = 0;
+        float _spawnCount = 0;
+
+        while (!_GamaManager.isGameOver())
         {
-            wait = 1;
+            spawnCooldown -= Time.deltaTime;
+            if (spawnCooldown <= 0)
+            {
+                _spawnCount++;
+                SpawnHuman();
+
+                float nextSpawnCooldown = (_waitTime - (((_waitTime / 100) * difficultyRange[dificuldade]) * _spawnCount));
+                spawnCooldown = (nextSpawnCooldown <= dificuldadeMaxima) ? dificuldadeMaxima - Random.Range(0, aleatoriedade) : nextSpawnCooldown - Random.Range(0, aleatoriedade); 
+                Debug.Log(spawnCooldown);
+
+            }
+
+
+            yield return new WaitForSeconds(Time.deltaTime);
         }
+
     }
-
-
-
-    private void Escolha()
+    private void SpawnHuman()
     {
-        if (timer <= 0)
-        {
-            //AA.permitido = true;
-            choice = Random.Range(0, 11);
-            if (choice <= 1)
-            {
-                Instantiate(humaninho[0], transform.position, Quaternion.identity);
-                timer = wait;
-            }
-            else if (choice <= 3)
-            {
-                Instantiate(humaninho[1], transform.position, Quaternion.identity);
-                timer = wait;
-            }
-            else if (choice <= 5)
-            {
-                Instantiate(humaninho[2], transform.position, Quaternion.identity);
-                timer = wait;
-            }
-            else if (choice <= 7)
-            {
-                Instantiate(humaninho[3], transform.position, Quaternion.identity);
-                timer = wait;
-            }
-            else if (choice <= 9)
-            {
-                Instantiate(humaninho[4], transform.position, Quaternion.identity);
-                timer = wait;
-            }
-            else if (choice <= 11)
-            {
-                Instantiate(humaninho[5], transform.position, Quaternion.identity);
-                timer = wait;
-            }
 
-            count += 1;
-
-
-            if (count == 5)
-            {
-                //timer = 5f;
-                count = 0;
-                wait -= .3f;
-                //Invoke("PerderVida", 2);
-
-            }
-
-        }
+        Instantiate(humaninho[Random.Range(0, humaninho.Length)], transform.position, Quaternion.identity);
     }
-
-    /*
-    private void PerderVida()
-    {
-        AA.permitido = false;
-        if (GM.points != 5)
-        {
-            erros ++;
-            GM.life -= 1;
-            GM.points = 0;
-            Erros();
-        }
-    }
-
-    void Erros()
-    {
-        if(erros == 3)
-        {           
-            city.Diminuir();
-            erros = 0;
-        }
-    }*/
 }
-
