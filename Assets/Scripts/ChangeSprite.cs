@@ -5,11 +5,11 @@ using UnityEngine;
 public class ChangeSprite : MonoBehaviour
 {
 
-    public Sprite rightSprite;
+    //public Sprite rightSprite;
     //SpriteRenderer myspriteRenderer;
     Movement movement;
-    BoxCollider2D boxbox;
-    Animator myanimator;
+    BoxCollider2D BCollider2D;
+    Animator myAnimator;
 
     //float speed = 3f;
     //Color color;
@@ -17,16 +17,16 @@ public class ChangeSprite : MonoBehaviour
 
     private void Start()
     {
-        boxbox = GetComponent<BoxCollider2D>();
-        myanimator = GetComponent<Animator>();
+        BCollider2D = GetComponent<BoxCollider2D>();
+        myAnimator = GetComponent<Animator>();
         movement = GetComponent<Movement>();
         //color = GetComponent<SpriteRenderer>().color;
         //myspriteRenderer = GetComponent<SpriteRenderer>();
     }
     public void Change()
     {
-        Destroy(boxbox);
-        Destroy(myanimator);
+        Destroy(BCollider2D);
+        Destroy(myAnimator);
         movement.speed = 0;
         Destroy(gameObject);
         //myspriteRenderer.sprite = rightSprite;

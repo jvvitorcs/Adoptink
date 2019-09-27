@@ -7,18 +7,11 @@ public class SaveClass
 {
     public List<int> score = new List<int>();
     public List<string> maps = new List<string>();
-    public List<int> scoreMaps = new List<int>();
-    ////método construtor
-    //public SaveClass(int score)
-    //{
-    //    this.score = score;
-    //}
+    public List<int> scoreMaps = new List<int>();  
 }
 
-public static class SaveManager //: MonoBehaviour
-    {
-   
-    //public static SaveManager instance;
+public static class SaveManager
+    {  
 
     public static void Save(int actualScore, string map, int mapScore)
     {
@@ -44,7 +37,6 @@ public static class SaveManager //: MonoBehaviour
                 }     
                 
             }
-            //var updatedSaveClass = previousSaveClass;           
             var saveJson = JsonUtility.ToJson(previousSaveClass);
             File.WriteAllText(Path.Combine(Application.persistentDataPath, "Save.sav"), saveJson);
         } else
@@ -84,21 +76,8 @@ public static class SaveManager //: MonoBehaviour
             Debug.Log("SaveNãoExiste");
             return null;            
             //throw;
-        }
-       
-        
+        }        
     }
-
-    /*var _score = new Score(999);
-        já ta inicializado >> _score.score = 100;
-        Tanto faz os dois
-       Save(new Score { score = 100 });
-
-
-
-       Save(_score);
-       var LoadedScore = Load();
-       Debug.Log(LoadedScore.score);*/
 }
 
 

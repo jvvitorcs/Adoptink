@@ -3,13 +3,8 @@ using System.Collections;
 
 class Configurations : MonoBehaviour
 {
-
     public GameObject configs;
-
-    //public void Start()
-    //{
-    //    DontDestroyOnLoad(gameObject);
-    //}
+    
     public void ActiveConfigs()
         {
             if (configs.activeSelf)

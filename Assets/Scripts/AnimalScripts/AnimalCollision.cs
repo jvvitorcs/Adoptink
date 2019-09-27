@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class AnimalCollision : MonoBehaviour
 {
-
     GameManage GM;
-    [SerializeField] bool area;
     public string humano;
     [SerializeField] AnimalScript animalScript;
     
@@ -25,9 +23,8 @@ public class AnimalCollision : MonoBehaviour
             spritechange.Change();
             GM.AddPoints();
             TriggerSparklesVFX();
-
         }
-        else if (collision.gameObject.tag == "Perfection" || collision.gameObject.tag == "Deadline")
+        else if (collision.gameObject.tag == "Deadline")
         {
             return;
         }

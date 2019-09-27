@@ -18,8 +18,7 @@ using System;
         public bool isInTransition = false;
 
         private void Awake()
-        {
-            
+        {            
             if (instance == null)
             {
                   DontDestroyOnLoad(gameObject);
@@ -29,15 +28,7 @@ using System;
             {
                 Destroy(gameObject);
             }
-
-
-
-        }
-        private void Update()
-        {
-
-
-        }
+        }       
 
         public void PlayMusic(AudioClip music, bool isLoop, Action action)
         {
@@ -51,11 +42,10 @@ using System;
                     {
                         Debug.Log("this clip is already in List and is playing");
                         return;
-
                     }
                 }
-
             }
+
             GameObject audioGO = new GameObject();
             audioGO.transform.parent = this.transform;
             audioGO.transform.name = music.name;
@@ -244,7 +234,6 @@ using System;
             if (!audioSorce.isPlaying)
             {
 
-
                 if (action != null)
                 {
 
@@ -261,8 +250,6 @@ using System;
                     audioManager.RemoveSfx(this);
 
                 }
-
-
 
             }
 

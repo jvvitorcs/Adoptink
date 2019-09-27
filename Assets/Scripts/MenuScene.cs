@@ -7,7 +7,5 @@
     {
         AudioManager.instance.PlayMusic(musiquinha, true);
     }
-
-
 }
 

@@ -6,20 +6,22 @@ using UnityEngine.SceneManagement;
 
 public class GameManage : MonoBehaviour
 {
-    //private Dictionary<string, int> mapsHistoric = new Dictionary<string, int>();
-    public List<int> score = new List<int>();
-    public List<string> maps = new List<string>();
+    [Header("Mechanics")]
     public GameObject menuPause, popupDificuldade;
     public float meta, time;
     public int combo, currentSceneIndex, timeToWait = 3, life = 3, points;
-    public bool pause = false, isBegin, calledWinScreen;
-    SpawnHumans SH;
-    City city;
     int maxLife = 6;
-    [SerializeField] AudioClip SoundPoint, SoundError;
-   // AudioSource myAudioSource;
+    //private Dictionary<string, int> mapsHistoric = new Dictionary<string, int>();
+    [Header("Controllers")]
+    public bool pause = false, isBegin, calledWinScreen;
     public Text cronometro;
     public string mapName;
+    [Header("References")]
+    public List<int> score = new List<int>();
+    public List<string> maps = new List<string>();      
+    [SerializeField] AudioClip SoundPoint, SoundError;
+    City city;
+    //AudioSource myAudioSource;    
 
     void Start()
     {
@@ -110,7 +112,6 @@ public class GameManage : MonoBehaviour
     {
         //myAudioSource.PlayOneShot(SoundPoint);
         AudioManager.instance.PlaySFx(SoundPoint, false);
-
         points += 1;
         life += 1;
 
@@ -129,12 +130,7 @@ public class GameManage : MonoBehaviour
         SaveManager.Save(combo, mapName, combo);
         yield return new WaitForSeconds(timeToWait);
         SceneManager.LoadScene("WinScreen");
-    }
-
-    //IEnumerator LoseScene()
-    //{
-    //    yield return new WaitForSeconds(2f);
-    //}
+    }   
 
     void TimerCount()
     {
@@ -148,10 +144,10 @@ public class GameManage : MonoBehaviour
         {
             if (time <= 0)
             {
-                //salvar aqui tambem;
                 SceneManage.getInstace().previousMap = mapName;
                 SaveManager.Save(combo, mapName, combo);
                 SceneManager.LoadScene("WinScreen");
+                calledWinScreen = true;
             }
         }
     }
@@ -173,22 +169,18 @@ public class GameManage : MonoBehaviour
         time = 240f;
         isBegin = true;
         FindObjectOfType<SpawnHumans>().dificuldade = 1;
-
-
-
     }
     public void SetHard()
     {
         popupDificuldade.SetActive(false);
         Time.timeScale = 1;
-        time = 180f;
+        time = 10f;
         isBegin = true;
         FindObjectOfType<SpawnHumans>().dificuldade = 2;
     }
 
     public bool isGameOver()
     {
-
         if (!calledWinScreen && life > 0)
             return false;
         return true;

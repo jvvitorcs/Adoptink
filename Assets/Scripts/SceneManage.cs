@@ -1,6 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,21 +7,17 @@ using UnityEngine.UI;
 public class SceneManage : MonoBehaviour
 {
     int currentSceneIndex;
-    public string previousMap;
-   
-
+    public string previousMap; 
     private static SceneManage instance;  
 
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-
     }
 
     void Update()
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
         if (currentSceneIndex == 0)
         {
             if (Input.GetKeyDown(KeyCode.Space))
