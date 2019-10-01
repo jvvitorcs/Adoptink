@@ -369,10 +369,10 @@ MonoBehaviour:
   - {fileID: 8436538178998636683, guid: 07ea62c3882c2f2438ec6606951439fd, type: 3}
   dificuldade: 0
   difficultyRange:
-  - 1.97
-  - 5.49
-  - 10
-  dificuldadeMaxima: 0.7
+  - 3.29
+  - 8.21
+  - 15
+  dificuldadeMaxima: 1
   aleatoriedade: 0.4
 --- !u!4 &193452932
 Transform:
@@ -2881,8 +2881,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600b33a61b398be4a95948069e082fa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 
-  maps: []
   menuPause: {fileID: 2106476311}
   popupDificuldade: {fileID: 1451864303}
   meta: 0
@@ -2895,10 +2893,12 @@ MonoBehaviour:
   pause: 0
   isBegin: 0
   calledWinScreen: 0
-  SoundPoint: {fileID: 8300000, guid: fc158d35ea14d9f40b01cc2caf87ec1a, type: 3}
-  SoundError: {fileID: 8300000, guid: 97004a49362ec6948834d1e499a64ecc, type: 3}
   cronometro: {fileID: 1849000103}
   mapName: 1
+  score: 
+  maps: []
+  SoundPoint: {fileID: 8300000, guid: fc158d35ea14d9f40b01cc2caf87ec1a, type: 3}
+  SoundError: {fileID: 8300000, guid: 97004a49362ec6948834d1e499a64ecc, type: 3}
 --- !u!4 &2059800637
 Transform:
   m_ObjectHideFlags: 0

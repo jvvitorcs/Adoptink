@@ -10,8 +10,8 @@ public class SpawnHumans : MonoBehaviour
     int choice, count, erros;
     [Header("Controllers")]
     public int dificuldade;
-    [Range(0, 10)] [SerializeField] private float[] difficultyRange; //Entre as 3 dificuldades, escolher quão rápido vai chegar na dificuldade máxima
-    [Range(0.5f, 1)] public float dificuldadeMaxima; // Quanto menor, mais dificil
+    [Range(0, 15)] [SerializeField] private float[] difficultyRange; //Entre as 3 dificuldades, escolher quão rápido vai chegar na dificuldade máxima
+    [Range(0.5f, 2)] public float dificuldadeMaxima; // Quanto menor, mais dificil
     [Range(0, 1)]public float aleatoriedade; //Lembrar de deixar menor que a dificuldade máxima (se ficar igual acaba vindo dois em sequencia)
 
     private void Start()

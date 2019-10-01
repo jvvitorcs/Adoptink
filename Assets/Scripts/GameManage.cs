@@ -174,7 +174,7 @@ public class GameManage : MonoBehaviour
     {
         popupDificuldade.SetActive(false);
         Time.timeScale = 1;
-        time = 10f;
+        time = 180f;
         isBegin = true;
         FindObjectOfType<SpawnHumans>().dificuldade = 2;
     }
