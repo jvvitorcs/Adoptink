@@ -52,8 +52,4 @@ public class SceneManage : MonoBehaviour
 
         return instance;
     }
-
-
-
-
 }

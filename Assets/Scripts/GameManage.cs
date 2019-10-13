@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManage : MonoBehaviour
 {
     [Header("Mechanics")]
-    public GameObject menuPause, popupDificuldade;
+    public GameObject menuPause, popupDificuldade, outGame;
     public float meta, time;
     public int combo, currentSceneIndex, timeToWait = 3, life = 3, points;
     int maxLife = 6;
@@ -38,7 +38,7 @@ public class GameManage : MonoBehaviour
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         isBegin = false;
         points = 0;
-        meta = 5;
+        meta = 2;
         life = 3;
     }
 
@@ -76,6 +76,17 @@ public class GameManage : MonoBehaviour
             Time.timeScale = 1;
             pause = false;
             menuPause.SetActive(false);
+        }
+    }
+
+    public void askOutGame()
+    {
+        if (outGame.activeSelf == true)
+        {
+            outGame.SetActive(false);
+        } else
+        {
+            outGame.SetActive(true);
         }
     }
     private void MudarTela()
@@ -156,7 +167,7 @@ public class GameManage : MonoBehaviour
     {
         Time.timeScale = 1;
         popupDificuldade.SetActive(false);
-        time = 600f;
+        time = 900f;
         isBegin = true;
         FindObjectOfType<SpawnHumans>().dificuldade = 0;
 
@@ -166,7 +177,7 @@ public class GameManage : MonoBehaviour
     {
         Time.timeScale = 1;
         popupDificuldade.SetActive(false);
-        time = 600f;
+        time = 840f;
         isBegin = true;
         FindObjectOfType<SpawnHumans>().dificuldade = 1;
     }
@@ -174,7 +185,7 @@ public class GameManage : MonoBehaviour
     {
         popupDificuldade.SetActive(false);
         Time.timeScale = 1;
-        time = 600f;
+        time = 780f;
         isBegin = true;
         FindObjectOfType<SpawnHumans>().dificuldade = 2;
     }
