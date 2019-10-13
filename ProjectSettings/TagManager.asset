@@ -56,9 +56,6 @@ TagManager:
   - name: Background
     uniqueID: 1765311803
     locked: 0
-  - name: HUD
-    uniqueID: 527597989
-    locked: 0
   - name: Foreground
     uniqueID: 3828988535
     locked: 0
@@ -67,4 +64,7 @@ TagManager:
     locked: 0
   - name: Pause
     uniqueID: 3540179985
+    locked: 0
+  - name: HUD
+    uniqueID: 527597989
     locked: 0

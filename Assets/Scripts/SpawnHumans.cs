@@ -15,8 +15,8 @@ public class SpawnHumans : MonoBehaviour
     [Range(0, 1)]public float aleatoriedade; //Lembrar de deixar menor que a dificuldade máxima (se ficar igual acaba vindo dois em sequencia)
 
     private void Start()
-    {
-        StartCoroutine(spawnHumans());
+    {       
+        StartCoroutine(spawnHumans());        
     }
     IEnumerator spawnHumans()
     {

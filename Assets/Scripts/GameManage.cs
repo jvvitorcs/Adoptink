@@ -142,7 +142,7 @@ public class GameManage : MonoBehaviour
         cronometro.text = cronometroString;
         if (isBegin)
         {
-            if (time <= 0)
+            if (time <= 0.1)
             {
                 SceneManage.getInstace().previousMap = mapName;
                 SaveManager.Save(combo, mapName, combo);
@@ -156,7 +156,7 @@ public class GameManage : MonoBehaviour
     {
         Time.timeScale = 1;
         popupDificuldade.SetActive(false);
-        time = 300f;
+        time = 600f;
         isBegin = true;
         FindObjectOfType<SpawnHumans>().dificuldade = 0;
 
@@ -166,7 +166,7 @@ public class GameManage : MonoBehaviour
     {
         Time.timeScale = 1;
         popupDificuldade.SetActive(false);
-        time = 240f;
+        time = 600f;
         isBegin = true;
         FindObjectOfType<SpawnHumans>().dificuldade = 1;
     }
@@ -174,7 +174,7 @@ public class GameManage : MonoBehaviour
     {
         popupDificuldade.SetActive(false);
         Time.timeScale = 1;
-        time = 180f;
+        time = 600f;
         isBegin = true;
         FindObjectOfType<SpawnHumans>().dificuldade = 2;
     }
