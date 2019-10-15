@@ -107,6 +107,10 @@ public class GameManage : MonoBehaviour
         combo += 1;
         city.Mudar();
         meta = meta * 2;
+        if(meta >= 401)
+        {
+            meta = 400;
+        }
         CancelInvoke();
     }
 
