@@ -52,4 +52,10 @@ public class SceneManage : MonoBehaviour
 
         return instance;
     }
+
+    public void ResetarJogo()
+    {
+        SaveManager.DeleteSave();
+
+    }
 }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.IO;
+
 
 public class GameManage : MonoBehaviour
 {
@@ -201,5 +203,7 @@ public class GameManage : MonoBehaviour
         return true;
 
     }
+
+   
 
 }
