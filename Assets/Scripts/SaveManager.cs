@@ -84,10 +84,19 @@ public static class SaveManager
 
     public static SaveClass DeleteSave()
     {
-        File.Delete(Application.persistentDataPath + "/Save.sav");
-        UnityEditor.AssetDatabase.Refresh();
-        SceneManager.LoadScene("Fases");
-        return null;
+        try
+        {
+            File.Delete(Application.persistentDataPath + "/Save.sav");
+            //UnityEditor.AssetDatabase.Refresh();
+            SceneManager.LoadScene("Fases");
+            return null;
+        }
+        catch (System.Exception)
+        {
+            Debug.Log("SaveNãoExiste");
+            return null;
+            //throw;
+        }
     }
 }
 
