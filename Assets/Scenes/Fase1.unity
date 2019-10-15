@@ -341,7 +341,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnHumans
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -379,7 +379,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193452930}
   m_LocalRotation: {x: -0, y: -0.026176924, z: -0, w: 0.99965733}
-  m_LocalPosition: {x: 10.47, y: -1.94, z: 1}
+  m_LocalPosition: {x: 10.47, y: -1.5600002, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1365,6 +1365,7 @@ GameObject:
   - component: {fileID: 678147560}
   - component: {fileID: 678147559}
   - component: {fileID: 678147558}
+  - component: {fileID: 678147561}
   m_Layer: 5
   m_Name: ButtonNo
   m_TagString: Untagged
@@ -1486,6 +1487,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678147556}
   m_CullTransparentMesh: 0
+--- !u!114 &678147561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678147556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eb4c7ba640299c4fa4ba78b5c01c3b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: f72a456e3f386ce4b9d7565ca640148d, type: 3}
 --- !u!1 &689330697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1688,6 +1702,7 @@ GameObject:
   - component: {fileID: 727321540}
   - component: {fileID: 727321539}
   - component: {fileID: 727321538}
+  - component: {fileID: 727321541}
   m_Layer: 5
   m_Name: ButtonYes
   m_TagString: Untagged
@@ -1810,6 +1825,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 727321536}
   m_CullTransparentMesh: 0
+--- !u!114 &727321541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727321536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eb4c7ba640299c4fa4ba78b5c01c3b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: f72a456e3f386ce4b9d7565ca640148d, type: 3}
 --- !u!1 &762170062
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,15 +2226,15 @@ RectTransform:
   m_GameObject: {fileID: 988355701}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.18504557, y: 0.18504557, z: 0}
+  m_LocalScale: {x: 0.95921946, y: 0.95921946, z: 0}
   m_Children: []
   m_Father: {fileID: 538086720}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 374, y: 128}
-  m_SizeDelta: {x: 3300.2, y: 1022.8}
+  m_AnchoredPosition: {x: 288, y: 79}
+  m_SizeDelta: {x: 613, y: 190}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &988355703
 MonoBehaviour:
@@ -3309,36 +3337,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849000101}
   m_CullTransparentMesh: 0
---- !u!1 &2006295770
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2006295771}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2006295771
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2006295770}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5175393, y: -0.5409049, z: 91.57617}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2059800635
 GameObject:
   m_ObjectHideFlags: 0
@@ -3717,7 +3715,7 @@ PrefabInstance:
     - target: {fileID: 7721518733243705747, guid: 1ba75700d4177eb4ca5c481bde49e4f3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.51
+      value: -2.85
       objectReference: {fileID: 0}
     - target: {fileID: 7721518733243705747, guid: 1ba75700d4177eb4ca5c481bde49e4f3,
         type: 3}
